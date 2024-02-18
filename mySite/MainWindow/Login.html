@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./LoginStyle.css">
+    <link rel="shortcut icon" href="../image/ico/iconGames.ico">
+    <title>Войти</title>
+</head>
+<body>
+    <main>
+        <section class="leftPart">
+            <img src="../image/GamePud.png" alt="Картинка геймпада" class="leftPart__img">
+        </section>
+        <section class="rightPart">
+                <div class="rightPart__close">
+                    <a href="./MainWindow.html" class="rightPart__closeButton"></a>
+                </div>
+                <div class="rightPart__logoCont">
+                    <img src="../image/Logo.png" alt="Логотип сайта" class="rightPart__logo">
+                </div>
+                <form>
+                    <div class="inputPart__login">
+                        <div class="login__inputTextP">
+                            <p class="login__loginText">Логин</p>
+                        </div>
+                        <input type="text" name="login" class="login__input">
+                    </div>
+                    <div class="inputPart__password">
+                        <div class="password__inputTextP">
+                            <p class="password__passwordText">Пароль</p>
+                        </div>
+                        <div class="password__psbox">
+                            <input type="password" name="registration" class="password__input" id="password__input">
+                            <button type="button" class="password__showPassword" id="password__showPassword"></button>
+                        </div>
+                    </div>
+                    <div class="rightPart__button">
+                        <input type="submit" class="button__submit" value="Войти"> 
+                        <a href="./Registration.html" class="button__reg">Зарегистрироваться</a>
+                    </div>
+                </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__icon">
+            <a href="https://vk.com/okkkdaa"><img src="../image/footer/iconVK.png" alt="Вконтакте" class="footer__img"></a>   
+            <a href="mailto:leventase@mail.ru" title="Ссылка на почту"><img src="../image/footer/iconMail.png" class="footer__img" alt="Mail почта"></a>
+        </div>
+    </footer>
+    <script src="./Login.js"></script>
+</body>
+</html>

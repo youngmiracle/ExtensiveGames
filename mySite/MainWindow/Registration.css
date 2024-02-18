@@ -1,0 +1,385 @@
+@import url(../nullStyle.css);
+/*Подключаем обнуляющий стиль сверху*/
+body{
+    background-color: #2E2E2E;
+    font-family: Jura;
+    width: 100%;
+    height: 100%;
+}
+/*Настраиваем размеры для контентной части*/
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Стили для левой части страницы*/
+.leftPart{
+    width: 30%;
+    height: 100%;
+    background: url(../image/phon/phonlogin.jpg)50% 50% no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftPart__img{
+    width: 50%;
+}
+.leftPart__img:hover{
+    animation: leftPartImgHover 2s ease-in forwards;;
+}
+.leftPart:hover{
+    animation: leftPartHover 1s forwards ease-in;
+}
+@keyframes leftPartImgHover {
+    50%{
+        width: 70%;
+    }
+}
+@keyframes leftPartHover {
+    100%{
+        width: 45%;
+    }
+}
+
+/*Работаем с правой частью страницы*/
+.rightPart{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.rightPart:hover{
+    animation: rightPartBody 0.5s alternate forwards;
+}
+@keyframes rightPartBody {
+    50%{
+        border: 8px black solid;
+        box-shadow: 7px 5px 10px 4px black;
+    }
+    100%{
+        background-color: #2a2a2a;
+        border: 3px black solid;
+        box-shadow: 4px 4px 10px 4px rgb(20, 20, 20);
+    }
+}
+
+/*Настройка кнопки назад*/
+.rightPart__close{
+    padding: 1% 1% 0 0;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: right;
+}
+.rightPart__closeButton{
+    background: url(../image/supportBtn/CloseButton.png)no-repeat 100% 100%;
+    background-size: contain;
+    width: 4%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+/*Стиль для логотипа*/
+.rightPart__logoCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin-top: -1%;
+}
+
+.rightPart__logo{
+    width: 20%;
+    height: 100%;
+}
+
+/*Стили для input*/
+form{
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Стиль для ввода имени пользователя*/
+/*Настройка расположения и размеров input NameUser*/
+.inputPart__nameUser{
+    margin-top: 2%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Стили для текста "Логин"*/
+.nameUser__inputTextP{
+    width: 50%;
+    display: flex;
+    justify-content: left;   
+    margin: 0 0 1% 4%;
+}
+.nameUser__loginText{
+    font-size: 50px;
+    color: #FFBB00;
+}
+/*Стиль для Input*/
+.nameUser__input{
+    padding-left: 15px;
+    font-size: 38px;
+    height: 45%;
+    color: white;
+    width: 50%;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 35px;
+}
+
+/*Стиль для ввода логина*/
+/*Настройка расположения и размеров input Login*/
+.inputPart__login{
+    margin-top: 1%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Стили для текста "Логин"*/
+.login__inputTextP{
+    width: 50%;
+    display: flex;
+    justify-content: left;   
+    margin: 0 0 1% 4%;
+}
+.login__loginText{
+    font-size: 50px;
+    color: #FFBB00;
+}
+/*Стиль для Input*/
+.login__input{
+    padding-left: 15px;
+    font-size: 38px;
+    height: 45%;
+    color: white;
+    width: 50%;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 35px;
+}
+
+/*Настройка стиля для ввода пароля*/
+.inputPart__password{
+    margin-top: 1%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Текст для пароля*/
+.password__psbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.password__inputTextP{
+    width: 50%;
+    display: flex;
+    justify-content: left;   
+    margin: 0 0 1% 4%;
+}
+.password__passwordText{
+    font-size: 50px;
+    color: #FFBB00;
+}
+/*Стиль для input пароля*/
+.psbox__inputBtn{
+    position: relative;
+    width: 51%;
+    padding-left: 15px;
+    font-size: 38px;
+    height: 43%;
+}
+.password__input{
+    width: 100%;
+    padding-left: 15px;
+    font-size: 38px;
+    height: 100%;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 35px;
+}
+/*Стиль для глазика который при нажатии показывает и скрывается пароль*/
+.password__showPasswordOne{
+    top: 25%;
+    right: 5%;
+    position: absolute;
+    width: 6%;
+    height: 50%;
+    background: url(../image/supportBtn/viewPassword.png) 100% no-repeat;
+    background-size: cover;
+}
+
+/*Настройка стиля для проверки пароля*/
+.inputPart__passwordCheked{
+    margin-top: 1%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Текст для пароля*/
+.password__psboxCheked{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.password__inputTextPCheked{
+    width: 50%;
+    display: flex;
+    justify-content: left;   
+    margin: 0 0 1% 4%;
+}
+.password__passwordTextCheked{
+    font-size: 50px;
+    color: #FFBB00;
+}
+/*Стиль для input пароля*/
+.psbox__inputBtnCheked{
+    position: relative;
+    width: 51%;
+    padding-left: 15px;
+    font-size: 38px;
+    height: 43%;
+}
+.password__inputCheked{
+    width: 100%;
+    padding-left: 15px;
+    font-size: 38px;
+    height: 100%;
+    color: white;
+    background-color: rgb(115, 0, 0);
+    border: 2px solid white;
+    border-radius: 35px;
+}
+/*Стиль для глазика который при нажатии показывает и скрывается пароль*/
+.password__showPasswordOneCheked{
+    top: 25%;
+    right: 5%;
+    position: absolute;
+    width: 6%;
+    height: 50%;
+    background: url(../image/supportBtn/viewPassword.png) 100% no-repeat;
+    background-size: cover;
+}
+/*Стили для кнопок ВОЙТИ и РЕГИСТРАЦИЯ*/
+.rightPart__button{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: 22%;
+}
+.button__check{
+    z-index: 2;
+    height: 50%;
+    opacity: 1;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #FFBB00;
+    border-radius: 35px;
+    border: 2px solid white;
+    width: 28%;
+}
+.button__check:hover{
+    animation: btnSubmit 0.6s alternate forwards;
+}
+/*Стиль для кнопки РЕГИСТРАЦИЯ*/
+.button__reg{
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    opacity: 1;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #FFBB00;
+    border-radius: 35px;
+    border: 2px solid white;
+    width: 28%;
+}
+.button__reg:hover{
+    animation: btnSubmit 0.6s alternate forwards;
+}
+/*Анимация для кнопок*/
+@keyframes btnSubmit {
+    20%{
+        border-radius: 60px;
+    }
+    50%{
+        border-radius: 15px;
+    }
+    100%{
+        cursor: alias;
+        box-shadow: 4px 4px 6px 3px black;
+        width: 50%;
+        font-size: 32px;
+        color: #000;
+        border-color: #000000;
+        border-radius: 35px;
+        background-color: white;
+    }
+}
+.aReg{
+    color: #FFBB00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+/*Стиль для подвала*/
+footer{
+    background-color: #000;
+    border: 2px solid #FFBB00;
+    width: 100%;
+    height: 10%;
+}
+.footer__icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+}
+.footer__img{
+    height: 50px;
+    margin-right: 25px;
+}
